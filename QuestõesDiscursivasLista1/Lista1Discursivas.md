@@ -70,4 +70,77 @@ printf("\n\t\"Primeiro programa\"");
 system("PAUSE");  
 return 0;  
 }*  
-**Resposta:**
+**Resposta:**  
+\n, o cursor pula para a linha seguinte  
+\t, depois de pular uma linha, o programa avança uma tabulação (TAB)  
+" , coloca aspas dentro da String  
+  system("PAUSE") -> pausa a execução   
+  *Saida do printf: "Primeiro programa"*  
+
+  **Questão 9**  
+  **Determine a saída exata do programa a seguir e explique como o compilador C
+interpreta os argumentos do tipo caractere simples ('\n', '\t', '\"') passados para o modificador %c:**
+
+*#include <stdio.h>  
+#include <stdlib.h>  
+int main()  
+{  
+printf("%c%c%cPrimeiro programa", '\n', '\t', '\"');  
+printf("%c", "\"");  
+system("PAUSE");  
+return 0;  
+}*  
+**Resposta:**  Saída do primeiro printf:
+
+O %c indica que o printf espera um caractere (char) para cada %c.
+
+'\n' -> pula uma linha 2.  
+'\t' -> insere uma tabulação  
+ 3.'"' -> imprime aspas  
+ *Saida do printf:*   "Primeiro programa"  
+
+ **Questão 10:**  
+ **10. A Linguagem C é conhecida por ser sensível a caixa alta e baixa (case sensitive). Explique
+o significado prático desse conceito. Identificadores como 'peso', 'Peso' e 'PESO' representam a mesma
+variável na memória? Assinale a alternativa correta e complemente com sua justificativa:**  
+a) Depende exclusivamente da implementação   do compilador utilizado no sistema.    
+**b) Verdadeiro (a linguagem C diferencia rigorosamente letras maiúsculas de minúsculas).**    
+c) Falso (letras maiúsculas e minúsculas são interpretadas como equivalentes pelo compilador).   
+
+**Questão 11**  
+**Para cada um dos valores constantes descritos na tabela abaixo, indique a classificação
+correta (por exemplo: constante inteira decimal, constante de ponto flutuante, constante de caractere,
+constante string ou sequência de escape) e o tipo de dado base correspondente em C (como char, int,
+float, double):**  
+| Constante Classificação | Tipo de Constante | Tipo Base em C |
+| :--- | :---: | ---: |
+|\r |Sequencia de escape| char|
+|2130|	Constante inteira decimal|	int|
+|-123 |Constante inteira decimal| int|
+|33.28 |Constante flutuante| Double|
+|0XFA |Constante inteira hexadecimal |int|
+|0101 |Constante inteira binaria| int |
+|2.0e30| Constante de ponto flutuante (Notação científica)| double|
+|\xDC |Sequência de escape|char|
+|'\"' |Consstante de caractere| char|
+|'\\'| Constante de caractere |char|
+|'F'|Constante de caractereConstante|char|
+|0 |Constante inteira decimal|Int|
+|'\0' |Constante de caractere / Sequência de escape| char|
+|"F" |Constante string| char[] ou char *|
+|-4567.89| Constante de ponto flutuante | double |  
+
+**Questão 12**  
+**A declaração de variáveis define o tipo e o identificador de cada espaço reservado na
+memória. Analise cada uma das declarações na tabela a seguir, preencha o seu status (Correto ou
+Incorreto) e, caso seja incorreto, justifique detalhadamente o erro sintático:**  
+|InstruçãoStatus| (C/I)Justificativa| Teórica|
+| :--- | :---: | ---: |
+|a) int a;|	Correto	Declaração sintaticamente válida de uma variável inteira do tipo int.|
+|b) float b;|	Correto	|Declaração sintaticamente válida de uma variável de ponto flutuante de precisão simples.|
+|c) double float c;|	Incorreto|	Combinação inválida de tipos. Os especificadores double e float são tipos base distintos e mutuamente exclusivos; double não é um modificador de float.|
+|d) unsigned char d;|	Correto|	Declaração válida usando o modificador de sinal unsigned sobre o tipo base char.|
+|e) unsigned e;|Correto|Válido. Na linguagem C, o uso do modificador unsigned sem especificar o tipo base subentende implicitamente o tipo int (unsigned int).|
+|f) long float f;|	Incorreto|	O modificador de tamanho long não pode ser combinado com o tipo float pelo padrão ANSI/ISO C. Para precisão expandida, deve-se utilizar double ou long double.|
+|g) long g;|	Correto	|Válido. O uso do modificador long de forma isolada é uma abreviação sintática para long int.|
+|h) long double h;|	Correto|	Declaração válida do tipo de ponto flutuante com precisão estendida (long é um modificador válido para double).|
