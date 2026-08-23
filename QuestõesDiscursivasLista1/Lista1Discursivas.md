@@ -143,4 +143,46 @@ Incorreto) e, caso seja incorreto, justifique detalhadamente o erro sintático:*
 |e) unsigned e;|Correto|Válido. Na linguagem C, o uso do modificador unsigned sem especificar o tipo base subentende implicitamente o tipo int (unsigned int).|
 |f) long float f;|	Incorreto|	O modificador de tamanho long não pode ser combinado com o tipo float pelo padrão ANSI/ISO C. Para precisão expandida, deve-se utilizar double ou long double.|
 |g) long g;|	Correto	|Válido. O uso do modificador long de forma isolada é uma abreviação sintática para long int.|
-|h) long double h;|	Correto|	Declaração válida do tipo de ponto flutuante com precisão estendida (long é um modificador válido para double).|
+|h) long double h;|	Correto|	Declaração válida do tipo de ponto flutuante com precisão estendida (long é um modificador válido para double).|  
+
+**Questão 13**  
+**No desenvolvimento de programas em C, o que são conceitualmente os arquivos de
+inclusão (headers com extensão .h)?**  
+a) São bibliotecas pré-compiladas em formato binário contendo funções estruturadas.  
+b) São utilitários do sistema que realizam a linkedição dos programas.  
+**c) São arquivos de texto ASCII padrão contendo protótipos de funções, definições de constantes, macros e
+tipos.**  
+d) São módulos de controle executados diretamente pelo microprocessador em tempo de execução.   
+
+**Questão 14**  
+**Qual é o papel e o objetivo principal do programador ao incluir arquivos de cabeçalho
+(como <stdio.h>)?**  
+**a) Instruir o compilador a carregar as definições das funções da biblioteca padrão antes de compilar o
+código-fonte.**  
+b) Linkeditar os arquivos binários do projeto automaticamente.   
+c) Executar e testar as saídas de vídeo diretamente no console de depuração.  
+d) Converter automaticamente o código-fonte C em arquivos executáveis (.EXE).  
+
+**Questão 15**  
+**A diretiva #include, amplamente utilizada no topo dos arquivos C, é classificada como:**  
+a) Uma instrução C nativa (compilada diretamente em linguagem de máquina).  
+b) Uma instrução específica de linguagens de programação orientadas a objetos.  
+**c) Uma diretiva especial para o pré-processador C, executada antes da compilação.**  
+d) Um objeto de classe de armazenamento dinâmico na memória heap.  
+
+**Questão 16**  
+**As diretivas de pré-processador em C (todas iniciadas com o caractere #) são lidas e interpretadas pelo:**  
+a) Linkeditor do sistema no momento de montagem do arquivo executável final.  
+b) Microprocessador diretamente em tempo de execução.  
+**c) Pré-processador (fase do compilador que altera o programa-fonte antes da compilação propriamente dita).**  
+d) Depurador integrado da IDE durante os testes de execução.  
+
+**Questão 17**  
+**Dentre as instruções de escrita abaixo, quais estão sintaticamente corretas? O que essas variações demonstram sobre a flexibilidade de espaçamento e formatação do compilador C?**  
+**a) printf ( "Primeiro programa" );  
+b) printf( "Primeiro programa" );  
+c) printf("Primeiro programa");**  
+d) printf "Primeiro programa" ;  
+
+**Resposta:** "d" errada pois não possui os parênteses. Demonstrar que o compilador da linguagem ignora os espaços em branco, fazendo com que a linguagem C possua o "free-form"(Formatação livre).  
+
