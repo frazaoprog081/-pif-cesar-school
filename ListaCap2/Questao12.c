@@ -1,14 +1,23 @@
-/*Questão 11. Conversor de Ângulos de Graus para Radianos — Desenvolva um programa que
-leia do teclado o valor de um ângulo em graus e o converta em seu equivalente em radianos. Exiba
-o resultado final formatado no console. Use a fórmula: radianos = graus * (Pi / 180.0), definindo Pi
-como uma constante de 3.141593.*/
+/*Questão 12. Operadores Unários de Antecessor e Sucessor — Elabore um programa em C que
+receba um número inteiro do usuário e, utilizando exclusivamente os operadores unários de
+incremento (++) e decremento (--), exiba o seu antecessor e o seu sucessor no console,
+justificando sua implementação lógica.*/
 
 #include <stdio.h>
 
 int main() {
+ int num;
+
+ printf("Digite um numero para saber seu sucessor e seu antecessor:  ");
+ scanf("%d", &num);
+
+ int antecessor = --num;
+ int sucessor = ++num + 1;
+
+ printf("O numero escolhido foi: %d\n seu antecessor: %d\n seu sucessor: %d\n", num, antecessor, sucessor);
 
 
+ return 0;
 
 
-    
 }
